@@ -1,0 +1,10 @@
+User-agent: YandexBot
+Allow: /
+
+User-agent: Googlebot
+Allow: /
+
+User-agent: *
+Allow: /
+
+Sitemap: https://businessclubcenter.github.io/sitemap.xml
