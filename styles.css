@@ -1,0 +1,158 @@
+/* Общие стили */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Montserrat", sans-serif;
+    background: linear-gradient(125deg, #1E90FF, #008080, #3CB371, #48D1CC, #9370DB, #DDA0DD, #BA55D3, #B22222);
+    background-size: 400% 400%;
+    animation: bganimation 14s infinite;
+}
+
+.text-center {
+    font-style: italic;
+    margin-top: 25px;
+}
+
+@keyframes bganimation {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* Стиль текста */
+.text {
+    color: white;
+    text-align: center;
+    text-transform: uppercase;
+    margin: 50px 0;
+    font-size: 24px;
+    animation: fadeIn 2s ease-out;
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+/* Адаптивность и сетка для карточек */
+.cards-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Адаптивная сетка */
+    gap: 15px;
+    padding: 20px;
+    max-width: 100%;
+    margin: auto;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start; /* Сделаем так, чтобы содержимое не смещалось вниз */
+    text-decoration: none;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.2); /* Прозрачный фон */
+    transition: transform 0.2s, box-shadow 0.3s, backdrop-filter 0.3s;
+    min-height: 300px;  /* Увеличиваем минимальную высоту для корректного отображения */
+    text-align: center;
+    overflow: hidden; /* Убираем переполнение */
+    position: relative;
+    backdrop-filter: blur(3px); /* Уменьшаем размытие фона для улучшения четкости текста */
+}
+
+/* Оформление карточки при наведении */
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    backdrop-filter: none; /* Убираем размытие фона при наведении */
+}
+
+/* Стиль для изображения в карточке */
+.card img {
+    width: 100%; /* Устанавливаем ширину 100% для соответствия ширине карточки */
+    height: auto; /* Автоматически регулируем высоту с пропорциями */
+    object-fit: cover; /* Заполняет область без искажений */
+    border-radius: 8px; /* Немного округлим углы */
+    margin-bottom: 15px; /* Добавим отступ снизу для картинки */
+}
+
+/* Стиль для текста в карточке */
+.card p, .card h2, .card h3 {
+    color: rgb(5, 5, 5);
+    font-weight: normal;
+    padding: 10px;
+    font-size: 13px; /* Замените на нужный размер */
+    font-style: italic;
+    margin-bottom: 10px; /* Отступ снизу */
+    transition: all 0.2s ease-in-out; /* Плавный переход */
+}
+
+/* Добавление улучшенной видимости текста при наведении */
+.card:hover p, .card:hover h2, .card:hover h3 {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6); /* Добавляем тень для улучшения контраста */
+}
+
+/* Стиль для заголовков в карточке */
+.card h3 {
+    color: rgb(66, 1, 1);
+    font-weight: bold;
+    padding: 10px;
+    font-size: 20px; /* Замените на нужный размер */
+}
+
+.card h2 {
+    color: rgb(38, 26, 26);
+    font-weight: normal;
+    padding: 10px;
+    font-size: 20px; /* Замените на нужный размер */
+    font-style: italic;
+}
+
+/* Медиазапросы для адаптивности */
+@media (max-width: 768px) {
+    .text {
+        font-size: 20px;
+    }
+    .cards-container {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    }
+}
+
+/* Добавление скроллинга для переполнения текста */
+.card p {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3; /* Ограничиваем текст до 3 строк */
+    overflow: hidden;
+    text-overflow: ellipsis; /* Многоточие для текста */
+    
+    /* Для совместимости с другими браузерами */
+    display: -ms-flexbox; /* Для старых версий IE */
+    display: flex;
+}
+
+/* Стили для навигации */
+.navbar {
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+.navbar a {
+    color: white;
+}
+
+.navbar a:hover {
+    color: #1E90FF;
+}
+
+/* Анимация текста при загрузке */
+.fade-in {
+    animation: fadeIn 2s ease-out;
+}

@@ -1,10 +1,67 @@
 User-agent: YandexBot
+Disallow: /admin/
+Disallow: /redirect.html
+Disallow: /redirect.js
+Allow: /
+
+User-agent: Yandex
+Disallow: /admin/
+Disallow: /redirect.html
+Disallow: /redirect.js
+Allow: /
+
+User-agent: YandexImages
+Disallow: /admin/
+Disallow: /redirect.html
+Disallow: /redirect.js
+Allow: /
+
+User-agent: YandexVideo
+Disallow: /admin/
+Disallow: /redirect.html
+Disallow: /redirect.js
+Allow: /
+
+User-agent: YandexMarket
+Disallow: /admin/
+Disallow: /redirect.html
+Disallow: /redirect.js
 Allow: /
 
 User-agent: Googlebot
+Disallow: /admin/
+Disallow: /redirect.html
+Disallow: /redirect.js
+Allow: /
+
+User-agent: Googlebot-Image
+Disallow: /admin/
+Disallow: /redirect.html
+Disallow: /redirect.js
+Allow: /
+
+User-agent: Googlebot-News
+Disallow: /admin/
+Disallow: /redirect.html
+Disallow: /redirect.js
+Allow: /
+
+User-agent: Googlebot-Video
+Disallow: /admin/
+Disallow: /redirect.html
+Disallow: /redirect.js
+Allow: /
+
+User-agent: Bingbot
+Disallow: /admin/
+Disallow: /redirect.html
+Disallow: /redirect.js
 Allow: /
 
 User-agent: *
+Disallow: /admin/
+Disallow: /redirect.html
+Disallow: /redirect.js
 Allow: /
 
-Sitemap: https://businessclubcenter.github.io/sitemap.xml
+Sitemap: https://businessclubcenter.github.io/Business_club/sitemap.xml
