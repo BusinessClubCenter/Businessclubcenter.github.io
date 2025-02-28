@@ -63,5 +63,6 @@ Disallow: /admin/
 Disallow: /redirect.html
 Disallow: /redirect.js
 Allow: /
+Allow: /sitemap.xml
 
 Sitemap: https://businessclubcenter.github.io/sitemap.xml
