@@ -65,4 +65,4 @@ Disallow: /redirect.js
 Allow: /
 Allow: /sitemap.xml
 
-Sitemap: https://businessclubcenter.github.io/sitemap.xml
+Sitemap: https://businessclubcenter.github.io/domain.com
