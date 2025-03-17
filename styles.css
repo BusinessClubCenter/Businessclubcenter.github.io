@@ -8,6 +8,27 @@ body {
     animation: bganimation 14s infinite;
 }
 
+.logo-container {
+    width: 100%; /* Занимает всю ширину контейнера */
+    height: 20vh; /* Высота логотипа, можно настроить по своему усмотрению */
+    display: flex;
+    justify-content: center; /* По центру по горизонтали */
+    align-items: center; /* По центру по вертикали */
+    background-color: #000000; /* Фон для логотипа */
+  }
+
+  .logo-container img {
+    width: 100%; /* Изображение растягивается на всю ширину */
+    height: 80%; /* Высота сохраняет пропорции */
+    object-fit: cover; /* Обрезает изображение, чтобы оно заполнило весь контейнер */
+  }
+
+  .content {
+    padding-top: 40px; /* Отступ сверху от логотипа */
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
 .text-center {
     font-style: italic;
     margin-top: 25px;
@@ -39,6 +60,212 @@ body {
     0% { opacity: 0; }
     100% { opacity: 1; }
 }
+
+#about {
+    background-color:rgba(0, 0, 0, 0.7);
+    padding: 30px;
+    border-radius: 10px; /* Скругление углов */
+    color: rgb(255, 255, 255);
+}
+
+
+#about h2 {
+    text-align: center;
+    font-size: 2em;
+    margin-bottom: 15px;
+    font-style: italic;
+    text-decoration: underline;
+}
+
+#about p {
+    text-align: center;
+    font-size: 1.1em;
+    margin-bottom: 20px;
+}
+
+.about-list {
+    list-style: none;
+    padding: 0;
+    text-align: center;
+}
+
+.about-list li {
+    font-size: 1.1em;
+    margin: 10px 0;
+}
+
+.about-location {
+    font-size: 1.2em;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 20px;
+}
+
+
+#services {
+    background-color:rgba(0, 0, 0, 0.7);
+    padding: 30px;
+    border-radius: 10px; /* Скругление углов */
+    color: rgb(255, 255, 255);
+}
+
+
+#services h2 {
+    text-align: center;
+    font-size: 2em;
+    margin-bottom: 15px;
+    font-style: italic;
+    text-decoration: underline;
+}
+
+#services p {
+    text-align: center;
+    font-size: 1.1em;
+    margin-bottom: 20px;
+}
+
+.services-list {
+    list-style: none;
+    padding: 0;
+    text-align: center;
+}
+
+.services-list li {
+    font-size: 1.1em;
+    margin: 10px 0;
+}
+
+.services-location {
+    font-size: 1.2em;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 20px;
+}
+
+#contact {
+    background-color:rgba(0, 0, 0, 0.7);
+    padding: 30px;
+    border-radius: 10px; /* Скругление углов */
+    color: rgb(255, 255, 255);
+}
+
+
+#contact h2 {
+    text-align: center;
+    font-size: 2em;
+    margin-bottom: 15px;
+    font-style: italic;
+    text-decoration: underline;
+}
+
+#contact p {
+    text-align: center;
+    font-size: 1.1em;
+    margin-bottom: 20px;
+}
+
+.contact-list {
+    list-style: none;
+    padding: 0;
+    text-align: center;
+}
+
+.contact-list li {
+    font-size: 1.1em;
+    margin: 10px 0;
+}
+
+.contact-location {
+    font-size: 1.2em;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 20px;
+}
+
+
+
+#callback {
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 30px;
+    border-radius: 10px; /* Скругление углов */
+    color: rgb(255, 255, 255);
+    margin-top: 30px; /* Отступ сверху */
+}
+
+#callback h2 {
+    text-align: center;
+    font-size: 2em;
+    margin-bottom: 15px;
+    font-style: italic;
+    text-decoration: underline;
+}
+
+#callback p {
+    text-align: center;
+    font-size: 1.1em;
+    margin-bottom: 20px;
+}
+
+.callback-list {
+    list-style: none;
+    padding: 0;
+    text-align: center;
+}
+
+.callback-list li {
+    font-size: 1.1em;
+    margin: 10px 0;
+}
+
+.callback-location {
+    font-size: 1.2em;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 20px;
+}
+
+/* --- Кнопка "Заказать звонок" --- */
+.callback-button {
+    background-color: #00bcd4;
+    color: white;
+    font-size: 1.1em;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    border: none;
+    transition: background 0.3s, transform 0.3s;
+}
+
+.callback-button:hover {
+    background-color: #9b59b6;
+    transform: scale(1.1);
+}
+
+.callback-button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+/* --- Чекбокс согласия --- */
+.agreement-label {
+    display: inline-block;
+    font-size: 14px;
+    margin-top: 15px;
+    color: white;
+}
+
+.agreement-link {
+    color: #00bcd4;
+    text-decoration: none;
+}
+
+.agreement-link:hover {
+    text-decoration: underline;
+}
+
+
+
+
 
 /* Адаптивность и сетка для карточек */
 .cards-container {
@@ -116,15 +343,6 @@ body {
     font-style: italic;
 }
 
-/* Медиазапросы для адаптивности */
-@media (max-width: 768px) {
-    .text {
-        font-size: 20px;
-    }
-    .cards-container {
-        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-    }
-}
 
 /* Добавление скроллинга для переполнения текста */
 .card p {
@@ -156,3 +374,146 @@ body {
 .fade-in {
     animation: fadeIn 2s ease-out;
 }
+
+/* Медиазапросы для адаптивности */
+
+/* Медиа-запрос для экранов шириной до 768px */
+@media (max-width: 768px) {
+    .text {
+        font-size: 18px; /* Уменьшаем размер текста */
+    }
+
+    .logo-container {
+        height: 15vh; /* Уменьшаем высоту логотипа */
+    }
+
+    #about, #services, #contact, #callback {
+        padding: 20px; /* Уменьшаем отступы */
+    }
+
+    #about h2, #services h2, #contact h2, #callback h2 {
+        font-size: 1.5em; /* Уменьшаем размер заголовков */
+    }
+
+    .card {
+        min-height: 250px; /* Уменьшаем минимальную высоту карточек */
+        font-size: 0.9em; /* Уменьшаем размер шрифта в карточках */
+    }
+
+    .cards-container {
+        grid-template-columns: 1fr 1fr; /* Разделяем карточки на два столбца */
+        gap: 10px; /* Уменьшаем отступы между карточками */
+    }
+
+    .callback-button {
+        width: 100%;
+        max-width: 200px; /* Кнопка "Заказать звонок" на полную ширину */
+        padding: 8px;
+        font-size: 1em; /* Уменьшаем размер шрифта */
+    }
+
+    .agreement-label {
+        font-size: 0.9em; /* Уменьшаем размер шрифта */
+        margin-top: 10px; /* Уменьшаем отступы */
+    }
+
+    .navbar a {
+        font-size: 0.9em; /* Уменьшаем размер шрифта в навигации */
+    }
+}
+
+/* Медиа-запрос для экранов шириной до 600px */
+@media (max-width: 600px) {
+    .text {
+        font-size: 16px; /* Уменьшаем размер текста */
+    }
+
+    .logo-container {
+        height: 12vh; /* Логотип ещё меньше */
+    }
+
+    #about h2, #services h2, #contact h2, #callback h2 {
+        font-size: 1.3em; /* Уменьшаем размер заголовков */
+    }
+
+    .card {
+        min-height: 220px; /* Уменьшаем минимальную высоту карточек */
+        font-size: 0.8em; /* Уменьшаем размер шрифта в карточках */
+    }
+
+    .cards-container {
+        grid-template-columns: 1fr; /* Разделяем карточки на один столбец */
+        gap: 5px; /* Уменьшаем отступы между карточками */
+    }
+
+    .callback-button {
+        width: 100%;
+        max-width: 180px; /* Уменьшаем максимальную ширину кнопки */
+        padding: 6px;
+        font-size: 0.9em; /* Уменьшаем размер шрифта */
+    }
+
+    .agreement-label {
+        font-size: 0.8em; /* Уменьшаем размер шрифта */
+        margin-top: 8px; /* Уменьшаем отступы */
+    }
+
+    .navbar a {
+        font-size: 0.8em; /* Уменьшаем размер шрифта в навигации */
+    }
+}
+
+/* Медиа-запрос для экранов шириной до 480px */
+@media (max-width: 480px) {
+    .text {
+        font-size: 14px; /* Дополнительно уменьшаем размер текста */
+    }
+
+    .logo-container {
+        height: 10vh; /* Логотип ещё меньше */
+    }
+
+    #about h2, #services h2, #contact h2, #callback h2 {
+        font-size: 1.1em; /* Уменьшаем размер заголовков */
+    }
+
+    .card {
+        min-height: 200px; /* Уменьшаем минимальную высоту карточек */
+        font-size: 0.75em; /* Уменьшаем размер шрифта в карточках */
+    }
+
+    .cards-container {
+        grid-template-columns: 1fr; /* Разделяем карточки на один столбец */
+        gap: 5px; /* Уменьшаем отступы между карточками */
+    }
+
+    .callback-button {
+        width: 100%;
+        max-width: 160px; /* Уменьшаем максимальную ширину кнопки */
+        padding: 5px;
+        font-size: 0.8em; /* Уменьшаем размер шрифта */
+    }
+
+    .agreement-label {
+        font-size: 0.7em; /* Уменьшаем размер шрифта */
+        margin-top: 5px; /* Уменьшаем отступы */
+    }
+
+    .navbar a {
+        font-size: 0.7em; /* Уменьшаем размер шрифта в навигации */
+    }
+}
+
+    /* Блок "Заказать звонок" */
+    .callback-button {
+        width: 100%;
+        max-width: 200px;
+        padding: 8px;
+        font-size: 0.9em;
+    }
+    .agreement-label {
+        font-size: 0.8em;
+    }
+
+
+
