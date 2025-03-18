@@ -54,6 +54,11 @@
       <p class="text-center">ЭЦП, домены, хостинг, открытие счета в Альфа-Банке, Рутокены, лицензии КриптоПро, видеонаблюдение в Ачинске</p>
     </div>
   </header>
+  <div id="cookie-banner">
+    <span>Чтобы сделать ваше пребывание на сайте более удобным, мы используем cookies. Примите их для продолжения.</span>
+    <button id="accept-cookies">Принять</button>
+    <button id="decline-cookies">Отклонить</button>
+  </div>
 
   <nav class="navbar navbar-expand-lg">
     <div class="container">
@@ -326,6 +331,49 @@
       "email": "videoachinsk@gmail.com"
     }
     
+  </script>
+
+  <script>
+    // Проверка, был ли уже принят consent (согласие) на использование cookies
+    if (!localStorage.getItem('cookies_accepted')) {
+      document.getElementById('cookie-banner').style.display = 'block';  // Если согласие не было принято, показываем баннер
+    }
+
+    // Слушаем клик по кнопке "Принять"
+    document.getElementById('accept-cookies').addEventListener('click', function () {
+      localStorage.setItem('cookies_accepted', 'true');  // Сохраняем согласие пользователя
+      document.getElementById('cookie-banner').style.display = 'none';  // Скрываем баннер после согласия
+
+      // Инициализация Яндекс.Метрики только после согласия
+      (function (d, w, c) {
+        w[c] = w[c] || [];
+        w[c].push(function() {
+          try {
+            w.yaCounter100342982 = new Ya.Metrika({
+              id: 100342982,  // Замените на свой идентификатор Яндекс.Метрики
+              clickmap: true,
+              trackLinks: true,
+              accurateTrackBounce: true
+            });
+          } catch(e) {}
+        });
+        var n = d.getElementsByTagName("script")[0],
+            s = d.createElement("script");
+        s.type = "text/javascript";
+        s.async = true;
+        s.src = "https://mc.yandex.ru/metrika/watch.js";
+        n.parentNode.insertBefore(s, n);
+      })(document, window, "yaCounter123456");
+    });
+
+    // Слушаем клик по кнопке "Отклонить"
+    document.getElementById('decline-cookies').addEventListener('click', function () {
+      localStorage.setItem('cookies_accepted', 'false');  // Сохраняем отказ от cookies
+      document.getElementById('cookie-banner').style.display = 'none';  // Скрываем баннер после отказа
+
+      // Если пользователь отклонил cookies, не инициализируем Яндекс.Метрику
+      console.log("Яндекс.Метрика не будет загружена без согласия пользователя.");
+    });
   </script>
 </body>
 

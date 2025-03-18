@@ -375,7 +375,89 @@ body {
     animation: fadeIn 2s ease-out;
 }
 
-/* Медиазапросы для адаптивности */
+/* Общие стили для баннера */
+#cookie-banner {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: #333;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    display: none;
+    z-index: 9999;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.9);
+    font-style: italic; /* Наклонный текст для всего баннера */
+    border-radius: 10px;
+  }
+  
+  #cookie-banner span {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 16px;
+  }
+  
+  #cookie-banner button {
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+    margin: 5px;
+  }
+  
+  #accept-cookies {
+    background-color: #4CAF50;
+    color: white;
+    border-radius: 10px;
+    font-style: italic; /* Наклонный текст для всего баннера */
+  }
+  
+  #decline-cookies {
+    background-color: #f44336;
+    color: white;
+    border-radius: 10px;
+    font-style: italic; /* Наклонный текст для всего баннера */
+  }
+  
+  /* Адаптивный стиль для мобильных устройств */
+  @media (max-width: 768px) {
+    #cookie-banner span {
+      font-size: 14px; /* Уменьшаем размер текста */
+    }
+  
+    #cookie-banner button {
+      padding: 8px 16px;
+      font-size: 12px;
+    }
+  }
+  
+  @media (max-width: 600px) {
+    #cookie-banner span {
+      font-size: 12px; /* Уменьшаем размер текста */
+    }
+  
+    #cookie-banner button {
+      padding: 6px 14px;
+      font-size: 10px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    #cookie-banner span {
+      font-size: 10px; /* Ещё меньше текст */
+    }
+  
+    #cookie-banner button {
+      padding: 5px 12px;
+      font-size: 9px;
+    }
+  }
+  
+
+
+
+/* Медиазапросы для адаптивности для всего сайта*/
 
 /* Медиа-запрос для экранов шириной до 768px */
 @media (max-width: 768px) {
